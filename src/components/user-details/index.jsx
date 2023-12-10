@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 
 import Modal from '../shared/posts-modal';
 import PostsCard from '../shared/post-card';
-import ProfilePage from '../shared/profile-page';
 
 import './index.css';
 import CustomClock from '../custom-clock';
+import ProfilePage from '../profile-page';
 const UserDetails = () => {
   const postsList = useSelector(state => state.postsList.postsDetails);
   const UserDetails = useSelector(state => state.usersList.UserDetails);
