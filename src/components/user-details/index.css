@@ -1,0 +1,21 @@
+.postslist-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.profile-page-heading {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-details {
+  background: white;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  border: 2px solid #000;
+}
