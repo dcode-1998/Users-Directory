@@ -39,12 +39,11 @@ const CustomClock = props => {
   };
 
   useEffect(() => {
-    console.log('time', state.time, new Date((cTime + state.count) * 1000).toLocaleTimeString());
     if (state.isPlay) {
       const id = setInterval(() => {
         // setTime(() => new Date().toLocaleTimeString());
         updateState({
-          time: new Date((cTime + state.count) * 1000).toLocaleTimeString(),
+          // time: new Date(state.time).toLocaleTimeString(),
           count: state.count + 1
         });
       }, 1000);
@@ -57,14 +56,15 @@ const CustomClock = props => {
   // useEffect(() => {}, []);
 
   useEffect(() => {
-    console.log('time123', cTime);
+    console.log('time123', cTime, new Date(cTime).toLocaleTimeString());
     updateState({ time: cTime });
   }, [cTime]);
 
   return (
     <div className='clock-content'>
-      <div style={{ display: 'flex' }}>
+      <div className='select-timezone'>
         <select
+          className='select-timezone-field'
           value={state.selectedTimeZone}
           onChange={e => {
             updateState({ selectedTimeZone: e.target.value });
@@ -77,7 +77,12 @@ const CustomClock = props => {
       </div>
       <div style={{ display: 'flex' }}>{state.time}</div>
       <div style={{ display: 'flex' }}>
-        <button onClick={() => clockPlay()}>{state.isPlay ? 'Pause' : 'Play'}</button>
+        <button
+          style={{ backgroundColor: 'lightgreen', width: '3rem' }}
+          onClick={() => clockPlay()}
+        >
+          {state.isPlay ? 'Pause' : 'Play'}
+        </button>
       </div>
     </div>
   );

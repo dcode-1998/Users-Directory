@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 import ErrorHandler from '../../utils/error_handler';
 import { setTime, setTimeObj, setTimeZoneList } from '../slices/timeZoneList';
 
@@ -23,9 +21,7 @@ export const getTime = input => async dispatch => {
         console.log('itemTImw', item.datetime);
         let date = item.datetime.split('T')[0];
         let time = item.datetime.split('T')[1].split('.')[0];
-        
         dispatch(setTime(time));
-        console.log('item', date, time);
       });
   } catch (err) {
     ErrorHandler(err);

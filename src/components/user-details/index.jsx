@@ -45,9 +45,7 @@ const UserDetails = () => {
             back
           </button>
         </div>
-        <div>
-          <CustomClock onClick={onClickClock} isPlay={state.isPlay} />
-        </div>
+        <CustomClock onClick={onClickClock} isPlay={state.isPlay} />
       </div>
       <h2 className='profile-page-heading'>Profile Page</h2>
       <ProfilePage user={UserDetails} />

@@ -1,7 +1,6 @@
 import { useEffect, useReducer } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { movieDetails } from '../../state-management/apis/movieDetailsAPI';
 import { usersList } from '../../state-management/apis/userListApi';
 import { postList } from '../../state-management/apis/postListApi';
 import { setPostsDetails } from '../../state-management/slices/postsList';
@@ -40,7 +39,6 @@ const UsersList = () => {
     return posts?.filter(post => post.userId === userId).length;
   };
 
-
   return (
     <div className='users_list_container'>
       {state.usersList.map(item => (
@@ -56,4 +54,3 @@ const UsersList = () => {
 };
 
 export default UsersList;
-
