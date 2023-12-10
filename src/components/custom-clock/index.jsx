@@ -11,7 +11,7 @@ const CustomClock = props => {
   const initialState = {
     isPlay: true,
     timeZones: [],
-    selectedTimeZone: 'Africa/Abidjan',
+    selectedTimeZone: 'Asia/Kolkata',
     time: '',
     count: 1
   };
@@ -35,7 +35,7 @@ const CustomClock = props => {
 
   const clockPlay = () => {
     updateState({ isPlay: !state.isPlay });
-    dispatch(setTime(state.time));
+    // dispatch(setTime(state.time));
   };
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const CustomClock = props => {
       const id = setInterval(() => {
         // setTime(() => new Date().toLocaleTimeString());
         updateState({
-          // time: new Date(state.time).toLocaleTimeString(),
+          time: new Date((cTime + state.count) * 1000).toLocaleTimeString(),
           count: state.count + 1
         });
       }, 1000);
@@ -56,8 +56,7 @@ const CustomClock = props => {
   // useEffect(() => {}, []);
 
   useEffect(() => {
-    console.log('time123', cTime, new Date(cTime).toLocaleTimeString());
-    updateState({ time: cTime });
+    updateState({ time: new Date(cTime * 1000).toLocaleTimeString() });
   }, [cTime]);
 
   return (
@@ -67,7 +66,7 @@ const CustomClock = props => {
           className='select-timezone-field'
           value={state.selectedTimeZone}
           onChange={e => {
-            updateState({ selectedTimeZone: e.target.value });
+            updateState({ selectedTimeZone: e.target.value, count: 1 });
           }}
         >
           {state.timeZones.map(item => (

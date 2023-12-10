@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   timeZoneList: [],
-  timeObj: {},
   time: ''
 };
 
@@ -16,12 +15,6 @@ export const TimeZoneListingSlice = createSlice({
         timeZoneList: payload
       };
     },
-    setTimeObj: (state, { payload }) => {
-      return {
-        ...state,
-        timeObj: payload
-      };
-    },
     setTime: (state, { payload }) => {
       return {
         ...state,
@@ -31,5 +24,5 @@ export const TimeZoneListingSlice = createSlice({
   }
 });
 
-export const { setTimeZoneList, setTimeObj, setTime } = TimeZoneListingSlice.actions;
+export const { setTimeZoneList, setTime } = TimeZoneListingSlice.actions;
 export default TimeZoneListingSlice.reducer;
