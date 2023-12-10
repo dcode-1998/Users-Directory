@@ -6,11 +6,11 @@ const ProfilePage = ({ user }) => {
       <div className='name-details details-width'>
         <div>{user.name}</div>
         <div className='display-flex al-just-space-between'>
-          <div className='text-ellipsis' title={user.email}>
+          <div className='text-ellipsis catch-phrase' title={user.company.catchPhrase}>
             {user.company.catchPhrase}
           </div>
           <div>|</div>
-          <div className='text-ellipsis' title={user.phone}>
+          <div className='text-ellipsis' title={user.username}>
             {user.username}
           </div>
         </div>

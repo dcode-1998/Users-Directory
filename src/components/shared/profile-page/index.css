@@ -7,20 +7,38 @@
   /* background-color: antiquewhite; */
 }
 
-.address-details {
-  width: 8rem;
+.catch-phrase {
+  width: 70%;
 }
 
 .details-width {
-  width: 20rem !important;
+  width: 20rem;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 800px) {
   .profile-page {
     height: 8rem;
   }
   .details-width {
-    width: 6rem;
+    width: 16rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .profile-page {
+    height: 8rem;
+  }
+  .details-width {
+    width: 10rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile-page {
+    height: 8rem;
+  }
+  .details-width {
+    width: 8rem;
   }
 }
 /* 
