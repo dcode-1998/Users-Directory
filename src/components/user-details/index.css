@@ -44,6 +44,13 @@
   }
 }
 
+@media screen and (width <=1200px) {
+  .postslist-container {
+    grid-template-columns: auto auto;
+    height: 28rem;
+  }
+}
+
 @media screen and (width <=750px) {
   .postslist-container {
     grid-template-columns: auto auto;
