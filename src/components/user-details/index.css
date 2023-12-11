@@ -44,10 +44,16 @@
   }
 }
 
-@media screen and (width <=1200px) {
+@media screen and (width <=1400px) {
   .postslist-container {
     grid-template-columns: auto auto;
-    height: 28rem;
+    height: 25rem;
+  }
+}
+@media screen and (width <=2000px) {
+  .postslist-container {
+    grid-template-columns: auto auto;
+    height: 22rem;
   }
 }
 
