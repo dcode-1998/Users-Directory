@@ -19,7 +19,7 @@ const UserDetails = () => {
     return updateState;
   }, initialState);
 
-  const handleClose = e => {
+  const handleClose = () => {
     updateState({ isOpen: false });
   };
 
