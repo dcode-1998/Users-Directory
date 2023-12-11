@@ -1,6 +1,11 @@
 .postslist-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(max-content, 2fr) !important;
+  height: 18rem;
+  overflow: auto;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .profile-page-heading {
@@ -18,4 +23,44 @@
   flex-direction: column;
   padding: 2%;
   border: 2px solid #000;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.postslist-container {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.postslist-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+@media screen and (width <=1000px) {
+  .postslist-container {
+    grid-template-columns: auto auto;
+    height: 24rem;
+  }
+}
+
+@media screen and (width <=750px) {
+  .postslist-container {
+    grid-template-columns: auto auto;
+    height: 24rem;
+  }
+}
+
+@media screen and (width <=550px) {
+  .postslist-container {
+    grid-template-columns: auto;
+    height: 25rem;
+  }
+}
+
+@media screen and (width <=400px) {
+  .postslist-container {
+    grid-template-columns: auto;
+    height: 24rem;
+  }
 }

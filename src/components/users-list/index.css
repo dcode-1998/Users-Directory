@@ -11,3 +11,13 @@
   background-color: white;
   /* margin: 0 auto; */
 }
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.directory-container {
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  font-size: larger;
+}

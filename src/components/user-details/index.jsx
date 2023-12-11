@@ -20,7 +20,6 @@ const UserDetails = () => {
   }, initialState);
 
   const handleClose = e => {
-    console.log(e.target.id);
     updateState({ isOpen: false });
   };
 
@@ -31,11 +30,10 @@ const UserDetails = () => {
   const onClickClock = data => {
     updateState({ isPlay: data });
   };
-  console.log('isPlay', state.isPlay);
 
   return (
     <div className='user-details'>
-      <div className='al-just-space-between'>
+      <div className='al-just-space-between' style={{ gap: '0.325rem' }}>
         <div>
           <button
             onClick={() => {
@@ -49,7 +47,7 @@ const UserDetails = () => {
       </div>
       <h2 className='profile-page-heading'>Profile Page</h2>
       <ProfilePage user={UserDetails} />
-      <div className='postslist-container'>
+      <div className={`postslist-container ${state.isOpen ? 'no-scroll' : ''}`}>
         {postsList.map(post => (
           <PostsCard key={post.id} post={post} onClick={onClick} />
         ))}

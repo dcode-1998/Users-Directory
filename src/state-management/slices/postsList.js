@@ -16,7 +16,6 @@ export const PostsListingSlice = createSlice({
       };
     },
     setPostsDetails: (state, { payload }) => {
-      console.log('payload', payload);
       return {
         ...state,
         postsDetails: payload

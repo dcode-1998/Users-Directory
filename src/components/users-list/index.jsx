@@ -40,15 +40,18 @@ const UsersList = () => {
   };
 
   return (
-    <div className='users_list_container'>
-      {state.usersList.map(item => (
-        <UserCard
-          key={item.id}
-          data={item}
-          posts={fetchPosts(state.postsList, item.id)}
-          onClick={onClick}
-        />
-      ))}
+    <div className='al-just-center flex-direction-column'>
+      <div className='directory-container'>Directory</div>
+      <div className='users_list_container'>
+        {state.usersList.map(item => (
+          <UserCard
+            key={item.id}
+            data={item}
+            posts={fetchPosts(state.postsList, item.id)}
+            onClick={onClick}
+          />
+        ))}
+      </div>
     </div>
   );
 };

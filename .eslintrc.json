@@ -18,9 +18,9 @@
   "plugins": ["react"],
   "ignorePatterns": ["/testReport/", "/test/"],
   "rules": {
-    "no-console": 0,
+    "no-console": 2,
     "no-extra-semi": 2,
-    "no-unused-vars": 0,
+    "no-unused-vars": 2,
     "react/prop-types": 0,
     "semi": [2, "always"],
     "max-lines": [2, 1500],

@@ -12,7 +12,6 @@ export const postList = input => async dispatch => {
     }
 
     const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-    console.log('res', response);
     dispatch(setPostsList(response.data));
   } catch (err) {
     ErrorHandler(err);

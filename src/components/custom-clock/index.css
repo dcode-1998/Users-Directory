@@ -7,10 +7,16 @@
 
 .select-timezone {
   display: flex;
+  /* width: 10rem; */
 }
 
 .select-timezone-field {
   width: 10rem;
 }
 
-/*media query*/
+@media screen and (width<= 450px) {
+  .select-timezone-field {
+    width: 6rem;
+    /* margin-left: 1rem; */
+  }
+}
