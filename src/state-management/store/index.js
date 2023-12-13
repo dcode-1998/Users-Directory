@@ -15,7 +15,7 @@ import rootReducer from '../slices';
 
 const persistConfig = {
   storage,
-  key: 'movie_browser'
+  key: 'user_directory'
 };
 
 const reducer = persistReducer(persistConfig, combineReducers({ ...rootReducer }));
